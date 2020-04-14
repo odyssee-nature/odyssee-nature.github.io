@@ -634,7 +634,33 @@ input, select, textarea {
 		.icon.brands:before {
 			font-family: 'Font Awesome 5 Brands';
 		}
-/* Card */
+/* Card Stuff */
+	/* Float four columns side by side */
+	.column {
+	  float: left;
+	  width: 25%;
+	  padding: 0 10px;
+	}
+
+	/* Remove extra left and right margins, due to padding */
+	.row {margin: 0 -5px;}
+
+	/* Clear floats after the columns */
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+	/* Responsive columns */
+	@media screen and (max-width: 600px) {
+	  .column {
+		width: 100%;
+		display: block;
+		margin-bottom: 20px;
+	  }
+	}
+	
 	.card {
 	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	  max-width: 150px;
@@ -647,7 +673,7 @@ input, select, textarea {
 	  color: grey;
 	  font-size: 14px;
 	}
-
+	
 /* Image */
 
 	.image {
